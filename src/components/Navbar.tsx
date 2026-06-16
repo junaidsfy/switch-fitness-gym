@@ -98,7 +98,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <a
               id="cta-nav-join"
-              href="home"
+              href="#home"
               className="px-5 py-2 font-display font-bold text-xs uppercase tracking-widest text-black bg-brand hover:bg-brand-dark rounded transition-colors duration-200 glow-btn"
             >
               Join Now
@@ -177,7 +177,7 @@ export default function Navbar() {
               >
                 <a
                   id="cta-mobile-join"
-                  href="home"
+                  href="#home"
                   
                   className="inline-block px-8 py-4 text-center font-display font-bold uppercase tracking-widest text-black bg-brand hover:bg-brand-dark rounded-full w-full transition-colors glow-btn text-sm"
                 >
