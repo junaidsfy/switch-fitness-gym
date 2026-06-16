@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand: #FF2E3B;
+  --color-brand-dark: #D61522;
+  --color-bg-dark: #0A0A0A;
+  --color-bg-card: #121212;
+  --color-bg-card-hover: #1A1A1A;
+}
+
+@layer utilities {
+  .glow-text {
+    text-shadow: 0 0 20px rgba(255, 46, 59, 0.4);
+  }
+  
+  .glow-box {
+    box-shadow: 0 0 40px rgba(255, 46, 59, 0.15);
+  }
+
+  .glow-btn {
+    box-shadow: 0 0 15px rgba(255, 46, 59, 0.3);
+  }
+}
+
+html {
+  /* scroll-behavior: smooth;*/
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+}
+
+/* Custom Scrollbar for premium dark feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF2E3B;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(18,18,18,0.9);
+}
+
+.glass-navbar {
+  background: rgba(10,10,10,0.95);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+}
+
+.text-stroke-brand {
+  -webkit-text-stroke: 1px var(--color-brand);
+  color: transparent;
+}

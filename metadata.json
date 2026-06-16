@@ -1,0 +1,6 @@
+{
+  "name": "Switch Fitness Gym Ghaziabad",
+  "description": "Premium, ultra-modern fitness gym website for Switch Fitness Gym, Ghaziabad featuring state-of-the-art equipment, master trainers, and specialized workout zones.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
