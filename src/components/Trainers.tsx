@@ -184,12 +184,17 @@ export default function Trainers() {
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-3 w-full sm:w-auto">
                 <a
-                  href="home"
-                  
-                  className="flex-1 sm:flex-initial px-6 py-3 font-display font-bold text-xs uppercase tracking-widest text-black bg-brand hover:bg-brand-dark rounded transition-colors duration-200 text-center glow-btn shrink-0"
-                >
-                  Book 1-on-1 Prep
-                </a>
+  href="#home"
+  onClick={(e) => {
+    e.preventDefault();
+    document.querySelector("#home")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+  className="flex-1 sm:flex-initial px-6 py-3 font-display font-bold text-xs uppercase tracking-widest text-black bg-brand hover:bg-brand-dark rounded transition-colors duration-200 text-center glow-btn shrink-0"
+>
+  Book 1-on-1 Prep
+</a>
                 
                 {/* Social Instagram handles */}
                 <motion.a
