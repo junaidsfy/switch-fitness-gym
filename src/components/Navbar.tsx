@@ -175,14 +175,14 @@ export default function Navbar() {
                 transition={{ delay: 0.04 * navLinks.length, duration: 0.3 }}
                 className="pt-6 w-full max-w-xs"
               >
-                <a
-                  id="cta-mobile-join"
-                  href="#home"
-                  
-                  className="inline-block px-8 py-4 text-center font-display font-bold uppercase tracking-widest text-black bg-brand hover:bg-brand-dark rounded-full w-full transition-colors glow-btn text-sm"
-                >
-                  Join Today
-                </a>
+               <a
+  id="cta-mobile-join"
+  href="#home"
+  onClick={(e) => handleLinkClick(e, "#home")}
+  className="inline-block px-8 py-4 text-center font-display font-bold uppercase tracking-widest text-black bg-brand hover:bg-brand-dark rounded-full w-full transition-colors glow-btn text-sm"
+>
+  Join Today
+</a>
               </motion.div>
             </div>
           </motion.div>
