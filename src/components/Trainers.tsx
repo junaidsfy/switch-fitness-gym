@@ -7,7 +7,7 @@ import React from "react";
 import { motion } from "motion/react";
 import { Instagram, Award, Shield, CheckCircle, Flame, Star } from "lucide-react";
 // @ts-expect-error - Vite dynamic asset loader
-import coachImage from "../assets/images/regenerated_image_1781462493067.png";
+import coachImage from "../assets/images/regenerated_image_1781462493067.jpg";
 
 export default function Trainers() {
   const containerVariants = {

@@ -3,16 +3,16 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Programs from "./components/Programs";
 import Trainers from "./components/Trainers";
-import Testimonials from "./components/Testimonials";
-import InstagramFeed from "./components/InstagramFeed";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+const Testimonials = lazy(() => import("./components/Testimonials"));
+const InstagramFeed = lazy(() => import("./components/InstagramFeed"));
+const Contact = lazy(() => import("./components/Contact"));
+const Footer = lazy(() => import("./components/Footer"));
 
 export default function App() {
   return (
@@ -24,12 +24,16 @@ export default function App() {
   <WhyChooseUs />
   <Programs />
   <Trainers />
+  <Suspense fallback={null}>
   <Testimonials />
   <InstagramFeed />
   <Contact />
+</Suspense>
 </main>
 
-<Footer />
+<Suspense fallback={null}>
+  <Footer />
+</Suspense>
     </div>
   );
 }

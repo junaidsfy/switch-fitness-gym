@@ -5,10 +5,10 @@
 
 import { Facility, Program, Trainer, GalleryItem, Testimonial, InstaPost } from "../types";
 
-import img1 from "../assets/images/1.png";
-import img2 from "../assets/images/2.png";
-import img3 from "../assets/images/3.png";
-import img4 from "../assets/images/new.jpeg";
+import img1 from "../assets/images/1.jpg";
+import img2 from "../assets/images/2.jpg";
+import img3 from "../assets/images/3.jpg";
+import img4 from "../assets/images/new.jpg";
 
 export const FACILITIES: Facility[] = [
   {
