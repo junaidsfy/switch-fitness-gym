@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Phone, MessageSquare, Flame, X, Shield, Sparkles } from 'lucide-react';
 
 const BACKGROUND_IMAGES = [
-  'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1920&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1920&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1920&auto=format&fit=crop'
+  'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1280&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1280&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1280&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1280&auto=format&fit=crop'
 ];
 
 export default function Hero() {
@@ -70,7 +70,7 @@ I would like to schedule a free trial session.`;
         {BACKGROUND_IMAGES.map((imgUrl, idx) => (
           <div
             key={idx}
-            className={`absolute inset-0 w-full h-full transition-all duration-[1500ms] ease-in-out transform ${
+            className={`absolute inset-0 w-full h-full transition-opacity duration-[1500ms] ease-in-out transform ${
               idx === currentSlide 
                 ? 'opacity-100 scale-102 pointer-events-auto' 
                 : 'opacity-0 scale-100 pointer-events-none'
@@ -80,7 +80,10 @@ I would like to schedule a free trial session.`;
               src={imgUrl}
               alt={`Switch Fitness Background Slide ${idx + 1}`}
               className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
+             referrerPolicy="no-referrer"
+              loading={idx === 0 ? "eager" : "lazy"}
+             fetchPriority={idx === 0 ? "high" : "auto"}
+             decoding="async"
             />
           </div>
         ))}
