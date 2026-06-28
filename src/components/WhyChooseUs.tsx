@@ -31,43 +31,49 @@ export default function WhyChooseUs() {
     },
   };
 
-  // Helper to dynamically get Lucide icons
   const renderIcon = (name: string) => {
-    // Fallbacks
     let IconComponent = Icons.Dumbbell;
+
     if (name === "Award") IconComponent = Icons.Award;
     if (name === "Zap") IconComponent = Icons.Zap;
     if (name === "Activity") IconComponent = Icons.Activity;
     if (name === "Users") IconComponent = Icons.Users;
     if (name === "TrendingUp") IconComponent = Icons.TrendingUp;
-    if (name === "ShieldAlert") IconComponent = Icons.Cpu; // CPU or Shield for Advanced Equipment
+    if (name === "ShieldAlert") IconComponent = Icons.Cpu;
 
     return <IconComponent className="h-6 w-6 text-brand" />;
   };
 
   return (
-    <section id="facilities" className="py-24 bg-bg-dark relative overflow-hidden">
+    <section
+      id="facilities"
+      className="py-24 bg-bg-dark relative overflow-hidden"
+    >
       {/* Decorative backdrop mesh */}
       <div className="absolute top-[30%] -left-[10%] w-[500px] h-[500px] bg-brand/5 rounded-full blur-[180px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Header Block with Title Reveal */}
+        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
             <span className="font-mono text-xs uppercase tracking-[0.3em] text-brand font-black block mb-3">
               THE ULTIMATE ARENA
             </span>
+
             <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-white tracking-widest leading-none">
               WHY CHOOSE <br />
               <span className="text-stroke-brand">SWITCH FITNESS</span>
             </h2>
           </div>
+
           <p className="font-sans text-gray-400 text-sm sm:text-base max-w-sm leading-relaxed">
-            We operate at the pinnacle of physical conditioning, combining ultra-modern biomechanic setups with elite trainer guidance to craft results.
+            We operate at the pinnacle of physical conditioning, combining
+            ultra-modern biomechanic setups with elite trainer guidance to
+            craft results.
           </p>
         </div>
 
-        {/* Feature Grid */}
+        {/* Cards */}
         <motion.div
           id="facilities-grid"
           variants={containerVariants}
@@ -83,27 +89,22 @@ export default function WhyChooseUs() {
               whileHover={{ y: -8, transition: { duration: 0.2 } }}
               className="group relative bg-[#121212]/90 hover:bg-[#161616]/95 border border-white/5 hover:border-brand/30 rounded-lg overflow-hidden p-5 sm:p-8 transition-colors duration-300"
             >
-              {/* Card visual background image on hover */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-10 transition-opacity duration-500 scale-105 pointer-events-none"
-                style={{ backgroundImage: `url(${facility.image})` }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-bg-dark to-transparent opacity-0 group-hover:opacity-40 transition-opacity duration-300 pointer-events-none" />
-
-              {/* Icon Container */}
+              {/* Icon */}
               <div className="mb-4 sm:mb-6 inline-flex items-center justify-center p-3 rounded bg-white/5 group-hover:bg-brand/10 transition-colors duration-300">
                 {renderIcon(facility.iconName)}
               </div>
 
-              {/* Title & Description */}
+              {/* Title */}
               <h3 className="font-display font-bold text-lg sm:text-xl text-white mb-2 sm:mb-3 tracking-wide">
                 {facility.title}
               </h3>
+
+              {/* Description */}
               <p className="font-sans text-xs sm:text-sm text-gray-400 group-hover:text-gray-300 leading-relaxed">
                 {facility.description}
               </p>
 
-              {/* Corner Accent Glow */}
+              {/* Corner Accent */}
               <div className="absolute bottom-0 right-0 w-8 h-8 pointer-events-none border-b-2 border-r-2 border-transparent group-hover:border-brand/40 transition-all duration-300 rounded-br-lg" />
             </motion.div>
           ))}

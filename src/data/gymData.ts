@@ -14,45 +14,45 @@ export const FACILITIES: Facility[] = [
   {
     id: "fac-1",
     title: "Advanced Equipment",
-    description: "Equipped with customized bio-mechanically precise machines (Jerai Strength, Hammer Strength) to target individual fibers safely.",
-    iconName: "ShieldAlert", // Dummy name or we map standard icons
-    image: "https://images.unsplash.com/photo-1637666062717-1c6bcab4a4ed?q=80&w=600"
+    description:
+      "Equipped with customized bio-mechanically precise machines (Jerai Strength, Hammer Strength) to target individual fibers safely.",
+    iconName: "ShieldAlert",
   },
   {
     id: "fac-2",
     title: "Certified Trainers",
-    description: "Unlock elite level results with coaches who hold national and international bodybuilding, nutrition and rehab certifications.",
+    description:
+      "Unlock elite level results with coaches who hold national and international bodybuilding, nutrition and rehab certifications.",
     iconName: "Award",
-    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=600"
   },
   {
     id: "fac-3",
     title: "Strength Zone",
-    description: "Dedicated high-performance lifting area with multiple heavy-duty power racks, premium deadlift platforms, and competition dumbbells (up to 60kg).",
+    description:
+      "Dedicated high-performance lifting area with multiple heavy-duty power racks, premium deadlift platforms, and competition dumbbells (up to 60kg).",
     iconName: "Zap",
-    image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=600"
   },
   {
     id: "fac-4",
     title: "Cardio Zone",
-    description: "A wide lineup of commercial cross-trainers, premium touch-screen treadmills, curved self-powered runners, and air-bikes.",
+    description:
+      "A wide lineup of commercial cross-trainers, premium touch-screen treadmills, curved self-powered runners, and air-bikes.",
     iconName: "Activity",
-    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=600"
   },
   {
     id: "fac-5",
     title: "Group Workouts",
-    description: "High-intensity metabolic conditioning, endurance builder programs, and group functional workouts fueled by electric community beats.",
+    description:
+      "High-intensity metabolic conditioning, endurance builder programs, and group functional workouts fueled by electric community beats.",
     iconName: "Users",
-    image: "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?q=80&w=600"
   },
   {
     id: "fac-6",
     title: "Personal Training",
-    description: "1-on-1 coaching blueprints engineered for your body type. Tailored workouts, real-time posture corrections, and precise weekly diet tracking.",
+    description:
+      "1-on-1 coaching blueprints engineered for your body type. Tailored workouts, real-time posture corrections, and precise weekly diet tracking.",
     iconName: "TrendingUp",
-    image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=600"
-  }
+  },
 ];
 
 export const PROGRAMS: Program[] = [

@@ -7,8 +7,7 @@ export interface Facility {
   id: string;
   title: string;
   description: string;
-  iconName: string; // references lucide icons
-  image: string;
+  iconName: string;
 }
 
 export interface Program {
