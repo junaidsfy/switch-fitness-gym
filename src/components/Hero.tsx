@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, MessageSquare, Flame, X, Shield, Sparkles } from 'lucide-react';
+import hero1 from "../assets/images/hero-1.jpg";
+import hero2 from "../assets/images/hero-2.jpg";
+import hero3 from "../assets/images/hero-3.jpg";
+import hero4 from "../assets/images/hero-4.jpg";
 
 const BACKGROUND_IMAGES = [
-  'https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1280&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1280&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1280&auto=format&fit=crop',
-  'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1280&auto=format&fit=crop'
+  hero1,
+  hero2,
+  hero3,
+  hero4,
 ];
 
 export default function Hero() {
@@ -21,7 +25,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % BACKGROUND_IMAGES.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
